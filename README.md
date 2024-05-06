@@ -29,6 +29,16 @@
 ## Overview
 This is a simple API that allows you to creats lessons and students using Nestjs, MongoDB and GraphQL
 
+## Pre-requisites
+- [Node.js](https://nodejs.org/en/)
+- [Docker](https://docs.docker.com/get-docker/)
+
+Ones docker is installed run this
+```bash
+$ docker run --name mongo -p 27017:27017 -d mongo
+
+```
+
 ## Installation
 
 ```bash
