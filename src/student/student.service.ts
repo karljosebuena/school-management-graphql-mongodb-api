@@ -18,6 +18,16 @@ export class StudentService {
     return this.studentRepository.findOne({ id });
   }
 
+  getManyStudents(ids: string[]): Promise<Student[]> {
+    return this.studentRepository.find({
+      where: {
+        id: {
+          $in: ids,
+        },
+      },
+    });
+  }
+
   createStudent(createStudentInput: CreateStudentInput): Promise<Student> {
     const student = this.studentRepository.create({
       id: uuid(),
