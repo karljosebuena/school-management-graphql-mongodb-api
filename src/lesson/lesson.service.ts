@@ -11,6 +11,10 @@ export class LessonService {
     @InjectRepository(Lesson) private lessonRepository: Repository<Lesson>,
   ) {}
 
+  getLessons(): Promise<Lesson[]> {
+    return this.lessonRepository.find();
+  }
+
   getLesson(id: string): Promise<Lesson> {
     return this.lessonRepository.findOne({ id });
   }
