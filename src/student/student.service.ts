@@ -10,7 +10,9 @@ export class StudentService {
   constructor(
     @InjectRepository(Student) private studentRepository: Repository<Student>,
   ) {}
-
+  getStudents(): Promise<Student[]> {
+    return this.studentRepository.find();
+  }
   createStudent(createStudentInput: CreateStudentInput): Promise<Student> {
     const student = this.studentRepository.create({
       id: uuid(),
