@@ -26,6 +26,9 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Overview
+This is a simple API that allows you to creats lessons and students using Nestjs, MongoDB and GraphQL
+
 ## Installation
 
 ```bash
